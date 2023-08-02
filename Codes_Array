@@ -71,3 +71,28 @@ int print2largest(int arr[], int n) {
 	    return s_lar;
 	}
 ----------------------------------------------------------------------------------------------------------
+JAVA --- Fibonacci series upto n ; n is user given(GFG , SAP Labs )
+
+class Solution
+{
+    //Function to return list containing first n fibonacci numbers.
+    public static long[] printFibb(int n) 
+    {
+        //Your code here
+        long i=0,j=1,k=0;
+           long arr[]=new long[n];
+        arr[0]=1;
+        int count=1;
+       while(count<n)
+       
+       {
+           k=i+j;
+           arr[count]=k;
+           i=j;
+           j=k;
+           count++;
+           
+       }
+       return arr;
+    }
+}
