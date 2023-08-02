@@ -96,3 +96,22 @@ class Solution
        return arr;
     }
 }
+----------------------------------------------------------------------------------------------------------------
+JAVA - Nth root of a number m -----always in java .(Accenture PYQ) 
+class Solution
+{
+    public int NthRoot(int n, int m)
+    {
+        // code here
+        int x=0;
+        int i=1;
+        do
+        {
+             x = (int)Math.pow(i,n);
+            if(x==m)
+              return i;
+             i++; 
+        }while(x<=m);
+        return -1;
+    }
+}
