@@ -50,3 +50,24 @@ int peakElement(int arr[], int n)
    }
 }
 -----------------------------------------------------------------------------------------------
+//Array 2nd Largest Element(gfg passed , SAP Labs Passed Solution)
+int print2largest(int arr[], int n) {
+	    // code here
+	    int i,lar,s_lar;
+	    lar=s_lar=-1;
+	    for(i=0;i<n;i++)
+	    {
+	        if(arr[i]>lar)
+	        {
+	            s_lar=lar;
+	            lar=arr[i];
+	        }
+	        
+	        if(arr[i]>s_lar && arr[i]<lar)
+	        {
+	            s_lar=arr[i];
+	        }
+	    }
+	    return s_lar;
+	}
+----------------------------------------------------------------------------------------------------------
