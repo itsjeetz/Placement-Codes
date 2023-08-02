@@ -28,4 +28,25 @@ int main()
     return 0;
 }
 ------------------------------------------------------------------------------------------
-  
+//Array peak Element --- peak element means ith element must be larger than its neighbours.
+
+int peakElement(int arr[], int n)
+{
+   int i;
+   for(i=0;i<n;i++)
+   {
+       if(i==0 && arr[i]>arr[i+1])
+       {
+           return i;
+       }
+       if(i==n-1 && arr[i]>arr[i-1])
+       {
+           return i;
+       }
+       else if(arr[i]>=arr[i-1] && arr[i]>=arr[i+1])
+       {
+           return i;
+       }
+   }
+}
+-----------------------------------------------------------------------------------------------
